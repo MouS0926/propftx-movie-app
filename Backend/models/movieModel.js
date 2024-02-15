@@ -10,7 +10,9 @@ const movieSchema = new mongoose.Schema({
     year: Number,
         
     createdBy: String,
-    username:String
+    username:String,
+    reviews:[]
+    
 },{
     versionKey:false
 });

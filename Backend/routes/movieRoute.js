@@ -60,4 +60,46 @@ movieRoute.delete("/delete/:id", auth, async (req, res) => {
     }
 });
 
+movieRoute.get("/",async(req,res)=>{
+    try {
+        const movies=await movieModel.find()
+        res.status(200).send(movies)
+    } catch (error) {
+        res.status(500).send({ message: "Internal server error" });
+    }
+})
+
+
+movieRoute.post("/review/add/:movieId", auth, async (req, res) => {
+    try {
+        const movieId = req.params.movieId;
+        const { rating, comment } = req.body;
+        
+        // Create a review object
+        const review = {
+            reviewby: req.body.createdBy, 
+            rating,
+            comment,
+            createdAt:new Date()
+        };
+
+        // Find the movie by ID
+        const movie = await movieModel.findById(movieId);
+        if (!movie) {
+            return res.status(404).json({ message: "Movie not found" });
+        }
+
+        // Add the review to the movie's reviews array
+        movie.reviews.push(review);
+        
+        // Save the updated movie document
+        await movie.save();
+
+        res.status(201).json({ message: "Review added successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
+
 module.exports={movieRoute}

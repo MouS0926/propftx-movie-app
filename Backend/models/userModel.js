@@ -11,7 +11,7 @@ const userSchema=mongoose.Schema({
         required: true,
       },
       watchlist :[],
-      reviews:[]
+     
     
 },{
     versionKey:false
