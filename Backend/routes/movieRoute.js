@@ -102,4 +102,16 @@ movieRoute.post("/review/add/:movieId", auth, async (req, res) => {
     }
 });
 
+
+//get single movie details
+movieRoute.get("/:movieid",async(req,res)=>{
+    try {
+        const movieid=req.params.movieid
+        const movieDetails=await movieModel.findOne({_id:movieid})
+        res.status(200).send(movieDetails)
+    } catch (error) {
+        res.status(500).send({ message: "Internal server error" });
+    }
+})
+
 module.exports={movieRoute}
