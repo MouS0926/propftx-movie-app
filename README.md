@@ -21,9 +21,9 @@ https://propftx-movie-app-puce.vercel.app/
 ## Features
 
 - View a list of movies
-- Details Page of a Particular Movie
+- Details Page of a Particular Movie (click on movie card)
 - User registration and login
-- Add, edit, and delete user's own movies
+- Add, edit, and delete user's own movies (Account Page)
 - Add reviews to any movie in Details Page
 
 ## API Endpoints
