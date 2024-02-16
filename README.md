@@ -14,6 +14,9 @@ Welcome to MovieApp! This is a web application built to manage and explore movie
   - Express
   - MongoDB
   - JWT for authentication
+    
+## Deployed Link:
+https://propftx-movie-app-puce.vercel.app/
 
 ## Features
 
