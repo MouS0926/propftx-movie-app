@@ -3,6 +3,8 @@ import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../Redux/Api/authApi";
+import { authuser } from "../Redux/Slice/authSlice";
 
 const CustomTextField = styled(TextField)`
   && {
@@ -30,9 +32,10 @@ export default function Login() {
   
     const dispatch = useDispatch();
     const navigate = useNavigate(); 
-  
+    const user=useSelector(authuser)
+
     const [formData, setFormData] = useState({
-      username: '',
+      
       email: '',
       password: ''
     });
@@ -43,7 +46,24 @@ export default function Login() {
           });
          
     }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(loginUser(formData))
+        .unwrap()
+        .then((data) => {
+            
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('loggedinUser', data.username);
+            navigate('/');
+        })
+        .catch((err) => {
+            alert("Wrong Credentials");
+        });
+      };
 
+      console.log(user);
+     
+      
   return (
     <div style={{ 
         height: '100vh', 
@@ -58,7 +78,7 @@ export default function Login() {
           <Typography variant="h5" align="center" gutterBottom sx={{ color: "#ffffff" }}>
            Login
           </Typography>
-          <form>
+          <form onSubmit={handleSubmit}>
             <Grid container  spacing={2}>
               
               <Grid item xs={12}>

@@ -62,7 +62,19 @@ movieRoute.delete("/delete/:id", auth, async (req, res) => {
 
 movieRoute.get("/",async(req,res)=>{
     try {
+       
         const movies=await movieModel.find()
+        res.status(200).send(movies)
+    } catch (error) {
+        res.status(500).send({ message: "Internal server error" });
+    }
+})
+
+movieRoute.get("/usermovie",auth,async(req,res)=>{
+    try {
+        
+        const {createdBy}=req.body
+        const movies=await movieModel.find({createdBy:createdBy})
         res.status(200).send(movies)
     } catch (error) {
         res.status(500).send({ message: "Internal server error" });

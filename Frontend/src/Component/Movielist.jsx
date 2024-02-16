@@ -15,8 +15,7 @@ const loading =useSelector(selectLoading)
     useEffect(()=>{
         dispatch(fetchMovies())
     },[])
-    console.log(loading);
-    console.log(movies);
+    
 if(loading==true)
 {
 return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>

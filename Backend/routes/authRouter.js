@@ -46,7 +46,7 @@ authRoute.post("/login",async(req,res)=>{
                 if(result)
                 {
                     var token = jwt.sign({ createdBy:user._id,username:user.username}, 'propftx');
-                    res.status(200).send({"msg":"Logedd in Successfully",token,username:user.name})
+                    res.status(200).send({"msg":"Logedd in Successfully",token,username:user.username})
                 }
                 else{
                     res.status(400).send("Invalid password") 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../Redux/Api/authApi";
 import { authLoading, registerSelectUser } from "../Redux/Slice/registerSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CustomTextField = styled(TextField)`
   && {
@@ -29,11 +29,11 @@ const CustomTextField = styled(TextField)`
 `;
 export default function Register() {
 
-    const message=useSelector(registerSelectUser)
+    //const message=useSelector(registerSelectUser)
     const loading =useSelector(authLoading)
     const dispatch = useDispatch();
     const navigate = useNavigate(); 
-    const [alertMessage, setAlertMessage] = useState("");
+    //const [alertMessage, setAlertMessage] = useState("");
 
 
     const [formData, setFormData] = useState({
@@ -133,6 +133,8 @@ export default function Register() {
                 >
                   { loading? "Register...........":"Register"}
                 </Button>
+
+                <Link to='/login'>Login</Link>
               </Grid>
             </Grid>
           </form>
