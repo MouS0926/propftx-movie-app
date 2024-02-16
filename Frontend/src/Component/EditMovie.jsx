@@ -99,7 +99,7 @@ export default function EditMovie() {
             <Grid item xs={12} sm={6} md={5}>
                 <Paper sx={{ padding: "20px", maxWidth: 400 , backgroundColor:"#292828" }}>
                     <Typography variant="h5" align="center" gutterBottom sx={{ color: "#ffffff" }}>
-                        Add Movie
+                       Edit Movie
                     </Typography>
                     <form onSubmit={handleUpdate}>
                         <Grid container  spacing={2}>
@@ -174,7 +174,7 @@ export default function EditMovie() {
                                     fullWidth
                                     sx={{ backgroundColor: "#bc6106" }}
                                 >
-                                    Add Movie
+                                   Update
                                 </Button>
                             </Grid>
                         </Grid>
