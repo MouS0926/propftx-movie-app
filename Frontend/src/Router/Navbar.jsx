@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { isLoggedin } from '../Redux/Slice/authSlice';
 
@@ -22,7 +22,8 @@ const settings = [ 'Account',  'Logout'];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  const [loggedIn, setLoggedIn] = React.useState(!!localStorage.getItem("token"));
+  const navigate=useNavigate()
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -40,6 +41,12 @@ function Navbar() {
 
   const isloggedin=useSelector(isLoggedin)
   const token=localStorage.getItem("token")
+
+  const handlelogout=()=>{
+    localStorage.removeItem("token")
+    navigate("/")
+  }
+
 const loggedinUser=localStorage.getItem("loggedinUser")
   return (
     
@@ -48,7 +55,7 @@ const loggedinUser=localStorage.getItem("loggedinUser")
         <Toolbar disableGutters>
     <Link to='/'>
     
-            LOGO
+    MovieApp
           
     </Link>
           
@@ -109,16 +116,26 @@ const loggedinUser=localStorage.getItem("loggedinUser")
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          <Link to='user/register'>
-          <Button
-                
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                register
-                
-              </Button>
-          </Link>
+
+
+            {
+              !token?
+              <Link to='user/register'>
+           
+              <Button
+                  
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  register
+                  
+                </Button>
+            
+            </Link>
+            :
+            ""
+            }
+         
              
          
           </Box>
@@ -155,8 +172,9 @@ const loggedinUser=localStorage.getItem("loggedinUser")
       </MenuItem>
 </Link>
 
-      <MenuItem  >
-        <Typography textAlign="center">Logout</Typography>
+      <MenuItem >
+     
+        <Typography textAlign="center" onClick={handlelogout}>Logout</Typography>
       </MenuItem>
   </Menu>
 </Box>
