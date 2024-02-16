@@ -24,7 +24,7 @@ authRoute.post("/register",async(req,res)=>{
                 else{
                     const newuser=new userModel({...req.body,password:hash})
                     await  newuser.save()
-                    res.status(200).send({"msg":`One New User is created`})
+                    res.status(200).send({"msg":`Registered Successfully`})
                 }
                 
             });

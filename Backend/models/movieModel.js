@@ -11,7 +11,8 @@ const movieSchema = new mongoose.Schema({
         
     createdBy: String,
     username:String,
-    reviews:[]
+    reviews:[],
+    rating:Number
     
 },{
     versionKey:false

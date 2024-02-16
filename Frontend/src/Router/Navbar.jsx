@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link } from 'react-router-dom';
 
 const pages = ['Movies', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -36,11 +37,11 @@ function Navbar() {
   };
 
   return (
-    <header>
-    <AppBar position="static" sx={{ backgroundColor: '#333' }}>
-      <Container maxWidth="lg">
+    
+    <AppBar position="static" sx={{ backgroundColor: '#333',marginBottom:"10px",width: '100vw'}} >
+      <Container   >
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+    
           <Typography
             variant="h6"
             noWrap
@@ -115,15 +116,18 @@ function Navbar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
+          <Link to='user/register'>
+          <Button
+                
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                register
+                
               </Button>
-            ))}
+          </Link>
+             
+         
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -158,7 +162,7 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
-    </header>
+  
   );
 }
 export default Navbar;
