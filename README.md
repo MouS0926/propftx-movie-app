@@ -66,6 +66,34 @@ Start the frontend
   npm run dev
 ```
 
+## Screenshots
+
+## LANDING PAGE
+<img src="https://github.com/MouS0926/propftx-movie-app/blob/main/screenshots/home.jpeg"  width="900" >
+
+
+
+## SIGNUP PAGE
+<img src="https://github.com/MouS0926/propftx-movie-app/blob/main/screenshots/registraion.jpeg"  width="900" >
+
+
+## MOVIE DETAILS
+<img src="https://github.com/MouS0926/propftx-movie-app/blob/main/screenshots/details.jpeg"  width="900" >
+
+
+
+## ADD MOVIE
+<img src="https://github.com/MouS0926/propftx-movie-app/blob/main/screenshots/add.jpeg"  width="900" >
+
+
+## EDIT MOVIE
+<img src="https://github.com/MouS0926/propftx-movie-app/blob/main/screenshots/update.jpeg"  width="900" >
+
+
+
+## ADD REVIEW
+<img src="https://github.com/MouS0926/propftx-movie-app/blob/main/screenshots/add%20review.jpeg"  width="900" >
+
 
 Thank You
 
