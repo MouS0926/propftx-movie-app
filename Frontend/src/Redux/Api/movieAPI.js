@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios"
 
-export const apiUrl='http://localhost:8080'
+export const apiUrl='https://propftx-backend.onrender.com'
 
 export const fetchMovies=createAsyncThunk("movies/fetchMovies",async()=>{
     const res=await axios.get(`${apiUrl}/movie/`)

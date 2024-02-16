@@ -3,9 +3,7 @@ import { Button, Grid, Paper, TextField, Typography, Select, MenuItem } from "@m
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-
-import { authuser } from "../Redux/Slice/authSlice";
-import { addMovie, fetchMovies, updateMovie } from "../Redux/Api/movieAPI";
+import {  fetchMovies, updateMovie } from "../Redux/Api/movieAPI";
 import { selectMovies } from "../Redux/Slice/movieSlice";
 
 const CustomTextField = styled(TextField)`
@@ -33,7 +31,7 @@ const CustomTextField = styled(TextField)`
 export default function EditMovie() {
     const dispatch = useDispatch();
     const navigate = useNavigate(); 
-    const user = useSelector(authuser);
+ 
 
     const allmovies=useSelector(selectMovies)
 

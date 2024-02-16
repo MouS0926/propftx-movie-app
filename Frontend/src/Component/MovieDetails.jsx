@@ -12,9 +12,10 @@ const CustomTextField = styled(TextField)`
       color: #ffffff; 
     }
     input {
-      color: #ffffff; 
+      color: #ffffff; /* Set input text color to white */
     }
     .MuiOutlinedInput-root {
+      color: #ffffff !important; /* Override the text color with !important */
       fieldset {
         border-color: #636363; 
       }
@@ -27,7 +28,6 @@ const CustomTextField = styled(TextField)`
     }
   }
 `;
-
 export default function MovieDetails() {
 const {id}=useParams()
 const [moviedetails,setMoviedetails]=useState({})
@@ -42,20 +42,23 @@ let reviewsList=moviedetails.reviews
 
 
 useEffect(()=>{
-    setLoading(true)
-axios.get(`${apiUrl}/movie/${id}`)
-
-.then((res)=>{
-    setLoading(false)
-    setMoviedetails(res.data)
-    console.log(res.data);
-})
-.catch((err)=>{
-    console.log(err);
-})
+   fetchMoviedetails() 
 
 },[])
 
+function fetchMoviedetails(){
+    setLoading(true)
+    axios.get(`${apiUrl}/movie/${id}`)
+    
+    .then((res)=>{
+        setLoading(false)
+        setMoviedetails(res.data)
+        console.log(res.data);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+}
 
 const handleReviewChange = (event) => {
     setReview({ ...review, comment: event.target.value });
@@ -66,7 +69,7 @@ const handleReviewChange = (event) => {
   const handleSubmitReview = async () => {
    try {
     await submitReview(id, { comment: review.comment })
-    
+    fetchMoviedetails()
    } catch (error) {
     console.log(error);
    }
@@ -140,6 +143,7 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
                   multiline
                   rows={4}
                   fullWidth
+                 
                  value={review.comment}
                   onChange={handleReviewChange}
                 />

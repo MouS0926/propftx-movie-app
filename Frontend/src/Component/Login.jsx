@@ -58,6 +58,7 @@ export default function Login() {
         })
         .catch((err) => {
             alert("Wrong Credentials");
+            console.log(err);
         });
       };
 
