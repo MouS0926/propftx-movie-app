@@ -124,9 +124,9 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
                     Genre:  {moviedetails.genre}
                   </Typography>
                 
-                  <Typography variant="body1" gutterBottom>
+                  {/* <Typography variant="body1" gutterBottom>
                     Rating: {moviedetails.rating}
-                  </Typography>
+                  </Typography> */}
                 </Grid>
               </Grid>
 
