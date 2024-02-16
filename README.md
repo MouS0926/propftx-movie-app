@@ -28,14 +28,41 @@ Welcome to MovieApp! This is a web application built to manage and explore movie
 - **GET** `/api/movies`: Retrieve a list of movies
 - **POST** `/api/users/register`: Register a new user
 - **POST** `/api/users/login`: User login
-- **POST** `/api/movies/add`: Add a new movie
-- **PUT** `/api/movies/:id/edit`: Edit a movie by ID
-- **DELETE** `/api/movies/:id/delete`: Delete a movie by ID
-- **POST** `/api/movies/:id/review/add`: Add a review to a movie by ID
+- **POST** `/api/movie/add`: Add a new movie
+- **PUT** `/api/movie/update/:id`: Edit a movie by ID
+- **DELETE** `/api/movie/delete/:id`: Delete a movie by ID
+- **GET** `/api/movie/:id`: Single Movie Details
+- **POST** `/api/movie/review/add/:id`: Add a review to a movie by ID
 
 ## How to Run Locally
 
 To run the project locally, follow these steps:
 
-1. Clone the repository:
+Clone the project
+
+```bash
+  git clone https://github.com/MouS0926/propftx-movie-app.git
+```
+
+Go to the project directory
+
+```bash
+  cd Frontend
+```
+
+Install dependencies
+
+```bash
+  npm install 
+
+```
+
+Start the frontend 
+
+```bash
+  npm run dev
+```
+
+
+Thank You
 
