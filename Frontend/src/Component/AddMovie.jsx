@@ -40,6 +40,7 @@ export default function AddMovie() {
         director: '',
         genre: '', 
         year: '',
+        
     });
 
     const handleInputChange = (e) => {

@@ -39,6 +39,7 @@ function Navbar() {
   };
 
   const isloggedin=useSelector(isLoggedin)
+  const token=localStorage.getItem("token")
 const loggedinUser=localStorage.getItem("loggedinUser")
   return (
     
@@ -124,7 +125,7 @@ const loggedinUser=localStorage.getItem("loggedinUser")
 
 
 {
-  isloggedin ?
+  token ?
   <Box sx={{ flexGrow: 0 }}>
   <Tooltip title="Open settings">
     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

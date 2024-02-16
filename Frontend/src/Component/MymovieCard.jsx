@@ -26,7 +26,7 @@ export default function MymovieCard({movie,handleDelete}) {
             {movie.title}
         </Typography>
         <Typography variant="body2" color="#fdfdfd">
-            Rating: {movie.rating}
+        Released Year: {movie.year}
         </Typography>
         <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between' }}>
           <Link to={`/movie/edit/${movie._id}`}>Edit</Link>

@@ -3,7 +3,7 @@ import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../Redux/Api/authApi";
-import { authLoading, registerSelectUser } from "../Redux/Slice/registerSlice";
+import { authLoading } from "../Redux/Slice/registerSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 const CustomTextField = styled(TextField)`

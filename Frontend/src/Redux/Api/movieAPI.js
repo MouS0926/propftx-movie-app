@@ -71,3 +71,35 @@ export const updateMovie = async (id, updatedMovieData) => {
     }
   };
    
+
+  export const submitReview = async (movieId, reviewData) => {
+    try {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        throw new Error("No token found");
+      }
+  
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      };
+  
+      const response = await axios.post(
+        `${apiUrl}/movie/review/add/${movieId}`,
+        reviewData,
+        config
+      );
+  
+      if (response.status === 201) {
+        console.log('Review added successfully');
+        return response.data;
+      } else {
+        throw new Error("Failed to add review");
+      }
+    } catch (error) {
+      console.error('Error adding review:', error);
+      throw error;
+    }
+  };

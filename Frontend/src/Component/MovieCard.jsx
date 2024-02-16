@@ -17,7 +17,7 @@ export default function MovieCard(movie) {
             {movie.title}
         </Typography>
         <Typography variant="body2" color="#fdfdfd">
-            Rating: {movie.rating}
+            Released Year: {movie.year}
         </Typography>
     </CardContent>
 </Card>

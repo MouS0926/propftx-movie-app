@@ -85,12 +85,12 @@ movieRoute.get("/usermovie",auth,async(req,res)=>{
 movieRoute.post("/review/add/:movieId", auth, async (req, res) => {
     try {
         const movieId = req.params.movieId;
-        const { rating, comment } = req.body;
+        const {  comment } = req.body;
         
         // Create a review object
         const review = {
             reviewby: req.body.createdBy, 
-            rating,
+            reviewername:req.body.username,
             comment,
             createdAt:new Date()
         };
