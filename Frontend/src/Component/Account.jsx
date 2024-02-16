@@ -1,4 +1,4 @@
-import { Button, Container, Grid } from '@mui/material'
+import { Button, Container, Grid, Typography } from '@mui/material'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -49,6 +49,7 @@ function fetchUsrMovie(){
 }
 
 
+console.log(mymovies);
 
 
   return (
@@ -59,10 +60,22 @@ function fetchUsrMovie(){
         </Link>
        
 
-        <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 1, sm: 8, md: 12 }}>
+        <Grid  container spacing={{ xs: 2, md: 2 }} columns={{ xs: 1, sm: 8, md: 12 }}>
 
 
-        {mymovies && mymovies.map((movie) => (
+
+        {mymovies?.length == 0 ? (
+                        <Typography variant="h5" sx={{margin:"40px"}} color="#fff">No movies added</Typography>
+                    ) : (
+                        mymovies.map((movie) => (
+                            <Grid item xs={6} sm={4} md={3} key={movie._id}>
+                                <MymovieCard movie={movie} handleDelete={handleDelete}/>
+                            </Grid>
+                        ))
+                    )}
+
+
+        {/* {mymovies && mymovies.map((movie) => (
 
 <Grid item xs={6} sm={4} md={3} key={movie._id}>
 
@@ -72,7 +85,9 @@ function fetchUsrMovie(){
 
 </Grid>
 
-))}
+))} */}
+
+
 
 </Grid>
     </Container>
