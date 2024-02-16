@@ -20,7 +20,7 @@ export default function AllRoutes() {
        
         
         }/>
-        <Route path="user/register" element={<Register/> }/>
+        <Route path="/user/register" element={<Register/> }/>
         <Route path="login" element={<Login/> }/>
         <Route path="/account" element={
            <PrivateRoute>

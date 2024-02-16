@@ -16,8 +16,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { isLoggedin } from '../Redux/Slice/authSlice';
 
-const pages = ['Movies', 'Pricing', 'Blog'];
-const settings = [ 'Account',  'Logout'];
+
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -89,32 +88,18 @@ const loggedinUser=localStorage.getItem("loggedinUser")
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+          <Link to='/user/register'>
+
+              <MenuItem  onClick={handleCloseNavMenu}>
+                          <Typography textAlign="center">Register</Typography>
+                      </MenuItem>
+          </Link>
+
+             
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+          
+         
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
 
