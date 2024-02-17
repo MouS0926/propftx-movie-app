@@ -34,7 +34,7 @@ https://propftx-movie-app-puce.vercel.app/
 - **POST** `/api/users/register`: Register a new user
 - **POST** `/api/users/login`: User login
 - **POST** `/api/movie/add`: Add a new movie
-- **PUT** `/api/movie/update/:id`: Edit a movie by ID
+- **PATCH** `/api/movie/update/:id`: Edit a movie by ID
 - **DELETE** `/api/movie/delete/:id`: Delete a movie by ID
 - **GET** `/api/movie/:id`: Single Movie Details
 - **POST** `/api/movie/review/add/:id`: Add a review to a movie by ID
