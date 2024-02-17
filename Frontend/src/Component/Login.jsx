@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../Redux/Api/authApi";
 import { authuser } from "../Redux/Slice/authSlice";
 
@@ -116,6 +116,7 @@ export default function Login() {
                 >
                   Login
                 </Button>
+                <Link to='/user/register'>Register</Link>
               </Grid>
             </Grid>
           </form>
