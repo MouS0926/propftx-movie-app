@@ -25,6 +25,8 @@ https://propftx-movie-app-puce.vercel.app/
 - User registration and login
 - Add, edit, and delete user's own movies (Account Page)
 - Add reviews to any movie in Details Page
+- The website is built with responsiveness in mind, ensuring optimal viewing experience across various devices and screen sizes.
+- Except for the landing page, all other pages are protected. Users need to log in to access them, enhancing security and privacy.
 
 ## API Endpoints
 
