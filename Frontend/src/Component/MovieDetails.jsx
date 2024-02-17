@@ -100,11 +100,11 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Typography variant="h4" gutterBottom>
+                  <Typography variant="h4" gutterBottom  color="#eba73b">
                   {moviedetails.title}
                   </Typography>
                   <Typography variant="subtitle1" gutterBottom>
-                    Release Date: January 1, 2024
+                    Release Date: {moviedetails.year}
                   </Typography>
                   <Typography variant="body1" gutterBottom>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla

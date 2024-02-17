@@ -22,7 +22,7 @@ export default function MymovieCard({movie,handleDelete}) {
     }}>
     <img src={movie.image} alt={movie.title} style={{ height: 300, objectFit: 'cover' }} />
     <CardContent sx={{ flexGrow: 1 }}>
-        <Typography gutterBottom variant="h6" component="div" color="#f0f0f0">
+        <Typography gutterBottom variant="h6" component="div" color="#eba73b">
             {movie.title}
         </Typography>
         <Typography variant="body2" color="#fdfdfd">
