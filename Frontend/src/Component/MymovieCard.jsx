@@ -28,7 +28,7 @@ export default function MymovieCard({movie,handleDelete}) {
         <Typography variant="body2" color="#fdfdfd" sx={{ fontFamily:'Montserrat, sans-serif' }}>
         Released Year: {movie.year}
         </Typography>
-        <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
           <Link to={`/movie/edit/${movie._id}`}>
             <Button variant='outlined'>  Edit</Button>
           
