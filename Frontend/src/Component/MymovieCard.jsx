@@ -22,10 +22,10 @@ export default function MymovieCard({movie,handleDelete}) {
     }}>
     <img src={movie.image} alt={movie.title} style={{ height: 300, objectFit: 'cover' }} />
     <CardContent sx={{ flexGrow: 1 }}>
-        <Typography gutterBottom variant="h6" component="div" color="#eba73b">
+        <Typography gutterBottom variant="h6" component="div" color="#eba73b" sx={{ fontFamily:'Montserrat, sans-serif' }}>
             {movie.title}
         </Typography>
-        <Typography variant="body2" color="#fdfdfd">
+        <Typography variant="body2" color="#fdfdfd" sx={{ fontFamily:'Montserrat, sans-serif' }}>
         Released Year: {movie.year}
         </Typography>
         <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between' }}>

@@ -100,13 +100,13 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Typography variant="h4" gutterBottom  color="#eba73b">
+                  <Typography variant="h4" gutterBottom  color="#eba73b" sx={{ fontFamily:'Montserrat, sans-serif' }}>
                   {moviedetails.title}
                   </Typography>
-                  <Typography variant="subtitle1" gutterBottom>
+                  <Typography variant="subtitle1" gutterBottom sx={{ fontFamily:'Montserrat, sans-serif' }}>
                     Release Date: {moviedetails.year}
                   </Typography>
-                  <Typography variant="body1" gutterBottom>
+                  <Typography variant="body1" gutterBottom sx={{ fontFamily:'Montserrat, sans-serif' }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                     fringilla turpis at augue feugiat, a feugiat ligula ultricies.
                     Nulla facilisi. Duis hendrerit justo non ante pharetra, sit amet
@@ -134,7 +134,7 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
           <Grid item xs={12}>
             <Card sx={{ backgroundColor: "#1d0e29", color: "#f7f7f7" }}>
               <CardContent>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h5" gutterBottom sx={{ fontFamily:'Montserrat, sans-serif' }}>
                   Add a Review
                 </Typography>
                 <CustomTextField
@@ -156,7 +156,7 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
           <Grid item xs={12}>
             <Card sx={{ backgroundColor: "#1d0e29", color: "#f7f7f7" }}>
               <CardContent>
-                <Typography variant="h5" gutterBottom >
+                <Typography variant="h5" gutterBottom sx={{ fontFamily:'Montserrat, sans-serif' }}>
                   All Reviews
                 </Typography>
                 {reviewsList?.map((el, index) => (
@@ -171,13 +171,13 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
                        </Grid>
                        <Grid item>
                         
-                         <Typography variant='body2' color='#fff'>
+                         <Typography variant='body2' color='#fff' sx={{ fontFamily:'Montserrat, sans-serif' }}>
                            {el.reviewername} - {new Date(el.createdAt).toLocaleDateString()}
                          </Typography>
                        </Grid>
                      </Grid>
                     
-                     <Typography variant='body1' gutterBottom>
+                     <Typography variant='body1' gutterBottom sx={{ fontFamily:'Montserrat, sans-serif' }}>
                        {el.comment}
                      </Typography>
                    </CardContent>
