@@ -1,4 +1,4 @@
-import { Card, CardContent, IconButton, Typography } from '@mui/material'
+import { Button, Card, CardContent, IconButton, Typography } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -18,7 +18,7 @@ export default function MymovieCard({movie,handleDelete}) {
         display: 'flex', 
     flexDirection: 'column', 
     height: '100%',
-    backgroundColor:"#212020" 
+    backgroundColor:"#160a20" 
     }}>
     <img src={movie.image} alt={movie.title} style={{ height: 300, objectFit: 'cover' }} />
     <CardContent sx={{ flexGrow: 1 }}>
@@ -29,7 +29,11 @@ export default function MymovieCard({movie,handleDelete}) {
         Released Year: {movie.year}
         </Typography>
         <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between' }}>
-          <Link to={`/movie/edit/${movie._id}`}>Edit</Link>
+          <Link to={`/movie/edit/${movie._id}`}>
+            <Button variant='outlined'>  Edit</Button>
+          
+
+            </Link>
           <IconButton aria-label="delete"  color="primary" onClick={handleDeleteClick}>
   <DeleteIcon />
 </IconButton>

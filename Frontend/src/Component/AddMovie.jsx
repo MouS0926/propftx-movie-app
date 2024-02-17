@@ -72,7 +72,7 @@ export default function AddMovie() {
             justifyContent: 'center' ,
         }}>
             <Grid item xs={12} sm={6} md={5}>
-                <Paper sx={{ padding: "20px", maxWidth: 400 , backgroundColor:"#292828" }}>
+                <Paper sx={{ padding: "20px", maxWidth: 400 , backgroundColor:"#160a20" }}>
                     <Typography variant="h5" align="center" gutterBottom sx={{ color: "#ffffff" }}>
                         Add Movie
                     </Typography>
@@ -130,11 +130,12 @@ export default function AddMovie() {
                                 <Select
                                     label="Genre"
                                     fullWidth
-                                   
+                                    
                                     name='genre'
                                     value={formData.genre}
                                     onChange={(e) => setFormData({ ...formData, genre: e.target.value })}
                                 >
+                                     <MenuItem value="" disabled>Select the genre</MenuItem>
                                     <MenuItem value="Action">Action</MenuItem>
                                     <MenuItem value="Comedy">Comedy</MenuItem>
                                     <MenuItem value="Drama">Drama</MenuItem>

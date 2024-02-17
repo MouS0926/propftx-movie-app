@@ -9,7 +9,7 @@ export default function MovieCard(movie) {
         display: 'flex', 
     flexDirection: 'column', 
     height: '100%',
-    backgroundColor:"#212020" 
+    backgroundColor:"#160a20" 
     }}>
     <img src={movie.image} alt={movie.title} style={{ height: 300, objectFit: 'cover' }} />
     <CardContent sx={{ flexGrow: 1 }}>

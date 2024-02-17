@@ -49,7 +49,7 @@ function Navbar() {
 const loggedinUser=localStorage.getItem("loggedinUser")
   return (
     
-    <AppBar position="static" sx={{ backgroundColor: '#333',marginBottom:"10px",width: '100vw'}} >
+    <AppBar position="sticky" sx={{ backgroundColor: '#0f0617',marginBottom:"10px",width: '100vw'}} >
       <Container   >
         <Toolbar disableGutters>
     <Link to='/'>

@@ -82,7 +82,7 @@ export default function Register() {
         
         }}>
       <Grid item xs={12} sm={6} md={5}>
-        <Paper sx={{ padding: "20px",maxWidth: 400 , backgroundColor:"#292828",}}>
+        <Paper sx={{ padding: "20px",maxWidth: 400 , backgroundColor:"#160a20",}}>
           <Typography variant="h5" align="center" gutterBottom sx={{ color: "#ffffff" }}>
             Register
           </Typography>

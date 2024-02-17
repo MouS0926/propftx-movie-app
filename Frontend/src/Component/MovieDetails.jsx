@@ -88,7 +88,7 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
 <div style={{ padding: 20 }}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Card sx={{backgroundColor:"#2d2c2c",color:"#f7f7f7"}}>
+          <Card sx={{backgroundColor:"#160a20",color:"#f7f7f7"}}>
             <CardContent>
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
@@ -132,7 +132,7 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
 
               <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Card sx={{ backgroundColor: "#2d2c2c", color: "#f7f7f7" }}>
+            <Card sx={{ backgroundColor: "#1d0e29", color: "#f7f7f7" }}>
               <CardContent>
                 <Typography variant="h5" gutterBottom>
                   Add a Review
@@ -147,20 +147,20 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
                  value={review.comment}
                   onChange={handleReviewChange}
                 />
-                <Button variant="contained" onClick={handleSubmitReview} style={{ marginTop: 10 }}>
+                <Button variant="contained" onClick={handleSubmitReview}   sx={{ backgroundColor: "#bc6106" ,marginTop:"10px"}}>
                   Submit Review
                 </Button>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12}>
-            <Card sx={{ backgroundColor: "#2d2c2c", color: "#f7f7f7" }}>
+            <Card sx={{ backgroundColor: "#1d0e29", color: "#f7f7f7" }}>
               <CardContent>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h5" gutterBottom >
                   All Reviews
                 </Typography>
                 {reviewsList?.map((el, index) => (
-                   <Card key={index} sx={{ backgroundColor: '#424242', color: '#f7f7f7', marginBottom: 2 }}>
+                   <Card key={index} sx={{ backgroundColor: '#221031', color: '#f7f7f7', marginBottom: 2 }}>
                    <CardContent>
                      <Grid container spacing={1} alignItems='center'>
                        <Grid item>
