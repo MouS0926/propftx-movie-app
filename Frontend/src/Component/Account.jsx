@@ -5,6 +5,21 @@ import { Link } from 'react-router-dom'
 import { apiUrl, deleteMovie } from '../Redux/Api/movieAPI'
 
 import MymovieCard from './MymovieCard'
+import styled from '@emotion/styled'
+const CustomButton = styled(Button)`
+  && {
+    
+    color: #f9f6f4;
+    border: 2px solid #d97f25;
+    background-color:#d97f25 ;
+    text-transform: none;
+  
+    &:hover {
+      background-color: #e0a85c;
+      border-color: #e0a85c;
+    }
+  }
+`;
 
 
 export default function Account() {
@@ -49,14 +64,14 @@ function fetchUsrMovie(){
 }
 
 
-console.log(mymovies);
+//console.log(mymovies);
 
 
   return (
     <div style={{ height: '100vh'}}>
     <Container maxWidth='lg'>
         <Link to='/movie/add'>
-        <Button variant='outlined'>Add</Button>
+        <CustomButton variant='outlined' sx={{marginBottom:"10px"}}>Add Movie</CustomButton>
         </Link>
        
 

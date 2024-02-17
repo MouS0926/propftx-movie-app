@@ -2,6 +2,23 @@ import { Button, Card, CardContent, IconButton, Typography } from '@mui/material
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+
+const EditButton = styled(Button)`
+  && {
+    
+    color: #d97f25;
+    border:1px solid #d97f25;
+    /* background-color:#d97f25 ; */
+    text-transform: none;
+  
+    &:hover {
+      background-color: #e0a85c;
+      border-color: #e0a85c;
+    }
+  }
+`;
+
 
 export default function MymovieCard({movie,handleDelete}) {
 
@@ -30,7 +47,7 @@ export default function MymovieCard({movie,handleDelete}) {
         </Typography>
         <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
           <Link to={`/movie/edit/${movie._id}`}>
-            <Button variant='outlined'>  Edit</Button>
+            <EditButton variant='outlined'>  Edit</EditButton>
           
 
             </Link>
