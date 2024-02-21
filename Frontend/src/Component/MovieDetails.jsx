@@ -147,7 +147,7 @@ return  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'ce
                  value={review.comment}
                   onChange={handleReviewChange}
                 />
-                <Button variant="contained" onClick={handleSubmitReview}   sx={{ backgroundColor: "#bc6106" ,marginTop:"10px"}}>
+                <Button variant="contained" disabled={!review.comment.trim()} onClick={handleSubmitReview}   sx={{ backgroundColor: "#bc6106" ,marginTop:"10px"}}>
                   Submit Review
                 </Button>
               </CardContent>
