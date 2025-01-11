@@ -18,6 +18,10 @@ Welcome to MovieApp! This is a web application built to manage and explore movie
 ## Deployed Link:
 https://propftx-movie-app-puce.vercel.app/
 
+## Sample User:
+User Id: user1@mail.com
+Password: 1234
+
 ## Features
 
 - View a list of movies
